@@ -260,10 +260,10 @@ def onmessage(update,bot:ObigramClient):
     try:
         thread = bot.this_thread
         username = update.message.sender.username
-        tl_admin_user = os.environ.get('AQUI TU USER SIN @')
+        tl_admin_user = os.environ.get('Pikyiiiiii')
 
         #Descomentar debajo solo si se ba a poner el usuario admin de telegram manual
-        tl_admin_user = 'AQUI TU USER SIN @'
+        tl_admin_user = 'Pikyiiiiii'
 
         jdb = JsonDatabase('database')
         jdb.check_create()
@@ -280,7 +280,7 @@ def onmessage(update,bot:ObigramClient):
                 user_info = jdb.get_user(username)
                 jdb.save()
         else:
-            mensaje = "Usted no tiene acceso.\nPor favor Contacta con mi Programador @"+"AQUI_TU_USER"+"/n"
+            mensaje = "Usted no tiene acceso.\nPor favor Contacta con mi Programador @"+"Pikyiiiiii"+"/n"
             intento_msg = "💢El usuario @"+username+ " ha intentando usar el bot sin permiso💢"
             bot.sendMessage(update.message.chat.id,mensaje)
             bot.sendMessage(Aqui el mismo id del canal,intento_msg)
@@ -480,8 +480,8 @@ def onmessage(update,bot:ObigramClient):
         thread.store('msg',message)
 
         if '/start' in msgText:
-            start_msg = ' Bienvenido a Ultra_Fast \n'
-            start_msg+= ' Soporte AQUI TU @ \n'
+            start_msg = ' Bienvenido a Evolucion_Bots \n'
+            start_msg+= ' Soporte Pikyiiiiii \n'
             start_msg+= ' Antes de comenzar vea el /tuto \n'
             start_msg+= " Para ver las subidas disponibles pulse /config \n\n"
             bot.editMessageText(message,start_msg)
@@ -580,16 +580,16 @@ def onmessage(update,bot:ObigramClient):
         
         elif '/aulacened' in msgText:
             getUser = user_info
-            getUser['moodle_host'] = "https://aulacened.uci.cu/"
-            getUser['uploadtype'] =  "draft"
-            getUser['moodle_user'] = "---"
-            getUser['moodle_password'] = "---"
+            getUser['moodle_host'] = "https://aulavirtual.isri.edu.cu/"
+            getUser['uploadtype'] =  "calendar"
+            getUser['moodle_user'] = "patata"
+            getUser['moodle_password'] = "saYam13*&"
             getUser['moodle_repo_id'] = 5
-            getUser['zips'] = 248
+            getUser['zips'] = 99
             jdb.save_data_user(username,getUser)
             jdb.save()
             statInfo = infos.createStat(username,getUser,jdb.is_admin(username))
-            bot.editMessageText(message,"✅Configuracion de Aulacened cargada")
+            bot.editMessageText(message,"✅Configuracion de Aulavirtual cargada")
            
         elif '/uclv' in msgText:
             getUser = user_info
@@ -705,9 +705,9 @@ def onmessage(update,bot:ObigramClient):
                     zize = len(proxy_list)-1
                     bot.sendMessage(update.message.chat.id,f'Proxy Registrado en la Posicion {zize}')
                 except:
-                    bot.sendMessage(update.message.chat.id,'❌Error en el comando /addproxy proxy❌')
+                    bot.sendMessage(update.message.chat.id,'❌Error pendejo 🤬 /addproxy proxy❌')
             else:
-                bot.sendMessage(update.message.chat.id,'❌No Tiene Permiso❌')
+                bot.sendMessage(update.message.chat.id,'❌No Tiene Permiso pendejo❌')
             return
         elif '/checkproxy' in msgText:
             isadmin = jdb.is_admin(username)
